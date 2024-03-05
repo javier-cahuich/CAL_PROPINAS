@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CAL_PROPINAS.Model"
+             xmlns:local1="clr-namespace:CAL_PROPINAS.ViewModel"
+             x:Class="CAL_PROPINAS.MainPage">
+
+    <StackLayout>
+        <Label Text="Costo del Servicio:" />
+        <Entry Text="{Binding CostoServicio}" Placeholder="Ingrese el costo" />
+
+        <Label Text="Número de Personas:" />
+        <Entry Text="{Binding NumeroPersonas}" Placeholder="Ingrese el número de personas" />
+
+        <Label Text="Porcentaje de Propina:" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="8%" Clicked="OnPorcentajePropinaClicked" />
+            <Button Text="10%" Clicked="OnPorcentajePropinaClicked" />
+            <Button Text="12.5%" Clicked="OnPorcentajePropinaClicked" />
+            <Button Text="15%" Clicked="OnPorcentajePropinaClicked" />
+        </StackLayout>
+
+        <Label Text="Resultado:" />
+        <Label Text="{Binding Resultado}" />
+
+        <Button Text="Calcular" Clicked="OnCalcularClicked" />
+        <Button Text="Limpiar" Clicked="OnLimpiarClicked" />
+    </StackLayout>
+
+</ContentPage>
+
